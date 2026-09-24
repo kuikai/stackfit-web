@@ -1,38 +1,27 @@
 # StackFit Web
 
-Create workouts, log sets, and run Tabata-style timers in the browser. Works on a phone and a computer. Data stays on the device.
+Create workouts, log sets, run Tabata timers. Phone + desktop. Data stays in the browser.
 
-Live files: open `index.html` or enable GitHub Pages on this repo (`Settings → Pages → Deploy from branch → main`).
+## Live site (GitHub Pages)
 
-After Pages is on, the app is at:
+The URL https://kuikai.github.io/stackfit-web/ returns **404 until Pages is turned on**.
+
+Do this once (takes about 30 seconds):
+
+1. Open https://github.com/kuikai/stackfit-web/settings/pages
+2. Under **Build and deployment → Source** choose **Deploy from a branch**
+3. Branch: **main** · Folder: **/ (root)**
+4. Click **Save**
+5. Wait 1–2 minutes, then open:
 
 https://kuikai.github.io/stackfit-web/
 
-## Why this exists
+If it still 404s, hard-refresh. First publish can take a couple of minutes.
 
-The Flutter StackFit app was a timer-first prototype. This is the missing half: a **web logbook** you can build on a desk and run in the gym.
-
-Same loop as Hevy / Strong, without the account:
-
-1. Save a template (Push Day, Tabata bodyweight, …)
-2. Start it and log weight × reps. Last time’s numbers sit in grey.
-3. Rest timer starts when you tick a set.
-4. Or open Timer and run 20/10 × 8 without a template.
-
-## Stack
-
-Vanilla HTML, CSS, JavaScript. No build step. `localStorage` for workouts, sessions, and settings. Optional service worker for offline after the first visit.
-
-## Open locally
-
-Any static server from this folder:
+## Local
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Then http://localhost:4173
-
-## Spec
-
-See [ACCEPTANCE_CRITERIA.md](./ACCEPTANCE_CRITERIA.md).
+http://localhost:4173
