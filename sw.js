@@ -1,5 +1,5 @@
-const CACHE = "stackfit-web-v1";
-const ASSETS = ["./","./index.html","./styles.css","./app.js","./manifest.json","./favicon.svg"];
+const CACHE = "stackfit-web-v2";
+const ASSETS = ["./","./index.html","./styles.css","./stack-core.js","./stack-views.js","./stack-events.js","./manifest.json","./favicon.svg"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
